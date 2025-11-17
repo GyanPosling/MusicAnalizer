@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for sharedLibs" enabled="true">
+      <profile name="Annotation profile for musicService" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -10,8 +10,8 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
         <module name="apiGateway" />
-        <module name="sharedLibs" />
         <module name="musicService" />
+        <module name="sharedLibs" />
         <module name="authService" />
       </profile>
     </annotationProcessing>

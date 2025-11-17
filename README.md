@@ -98,4 +98,80 @@ Music Analyzer — это полнофункциональное веб-прил
 
 ---
 
+music-analyzer/
+├── backend/
+│   ├── music-service/                 # Основной сервис (музыка + аналитика)
+│   │   ├── src/
+│   │   │   ├── main/
+│   │   │   │   ├── java/com/musicanalyzer/
+│   │   │   │   │   ├── MusicAnalyzerApplication.java
+│   │   │   │   │   ├── config/
+│   │   │   │   │   │   ├── SecurityConfig.java
+│   │   │   │   │   │   ├── WebConfig.java
+│   │   │   │   │   │   └── RedisConfig.java
+│   │   │   │   │   ├── controller/
+│   │   │   │   │   │   ├── MusicController.java
+│   │   │   │   │   │   ├── AnalyticsController.java
+│   │   │   │   │   │   ├── ParserController.java
+│   │   │   │   │   │   └── UserDataController.java
+│   │   │   │   │   ├── service/
+│   │   │   │   │   │   ├── MusicService.java
+│   │   │   │   │   │   ├── AnalyticsService.java
+│   │   │   │   │   │   ├── ParserService.java
+│   │   │   │   │   │   ├── LastFmClient.java
+│   │   │   │   │   │   └── StatisticsCalculator.java
+│   │   │   │   │   ├── repository/
+│   │   │   │   │   │   ├── TrackRepository.java
+│   │   │   │   │   │   ├── ArtistRepository.java
+│   │   │   │   │   │   ├── ListeningHistoryRepository.java
+│   │   │   │   │   │   └── UserRepository.java
+│   │   │   │   │   ├── model/
+│   │   │   │   │   │   ├── entity/
+│   │   │   │   │   │   │   ├── User.java
+│   │   │   │   │   │   │   ├── Track.java
+│   │   │   │   │   │   │   ├── Artist.java
+│   │   │   │   │   │   │   ├── Album.java
+│   │   │   │   │   │   │   └── ListeningHistory.java
+│   │   │   │   │   │   ├── dto/
+│   │   │   │   │   │   │   ├── TrackDto.java
+│   │   │   │   │   │   │   ├── ArtistDto.java
+│   │   │   │   │   │   │   ├── AnalyticsResponse.java
+│   │   │   │   │   │   │   └── ListeningStats.java
+│   │   │   │   │   │   └── enums/
+│   │   │   │   │   │     └── TimeRange.java
+│   │   │   │   │   └── util/
+│   │   │   │   │       ├── DateUtils.java
+│   │   │   │   │       ├── MusicUtils.java
+│   │   │   │   │       └── JsonParser.java
+│   │   │   │   └── resources/
+│   │   │   │       ├── application.yml
+│   │   │   │       ├── data.sql
+│   │   │   │       └── logback-spring.xml
+│   │   │   └── pom.xml
+│   ├── auth-service/                 # Сервис аутентификации
+│   │   ├── src/main/java/com/musicanalyzer/auth/
+│   │   │   ├── controller/AuthController.java
+│   │   │   ├── service/JwtService.java
+│   │   │   └── config/JwtAuthFilter.java
+│   │   └── pom.xml
+│   ├── api-gateway/                  # API Gateway
+│   │   ├── src/main/java/com/musicanalyzer/gateway/
+│   │   └── pom.xml
+│   └── shared-libs/                  # Общие библиотеки
+│       ├── common-dto/               # Общие DTO
+│       └── security-config/          # Общая security конфигурация
+├── frontend/                         # React приложение
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── hooks/
+│   │   ├── store/
+│   │   └── utils/
+│   └── package.json
+└── infrastructure/                   # Docker и конфиги
+    ├── docker-compose.yml
+    └── nginx.conf
+
 **Music Analyzer** — это не просто приложение, а целая экосистема для понимания и анализа вашей музыкальной личности! 🎧
