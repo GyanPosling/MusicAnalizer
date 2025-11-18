@@ -5,7 +5,9 @@ import java.util.List;
 import bursh.com.musicService.models.entities.Album;
 import bursh.com.musicService.models.entities.Artist;
 import bursh.com.musicService.models.entities.Track;
+import lombok.Data;
 
+@Data
 public class UserDTO {
     private int id;
     private String username;

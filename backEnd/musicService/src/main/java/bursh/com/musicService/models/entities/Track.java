@@ -2,7 +2,6 @@ package bursh.com.musicService.models.entities;
 
 import bursh.com.musicService.models.enums.TrackGenre;
 import bursh.com.musicService.models.enums.TrackType;
-import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

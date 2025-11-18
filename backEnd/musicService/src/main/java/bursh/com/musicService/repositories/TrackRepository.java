@@ -17,7 +17,7 @@ import bursh.com.musicService.models.enums.TrackType;
 public interface TrackRepository extends JpaRepository<Track, Integer> {
     List<Track> findByArtist(Artist artist);
     Optional<Track> findByTitle(String title);
-    List<Track> findByAlbum(Album album);
+    List<Track> findByAlbum(String albumTitle);
     List<Track> findByGenre(TrackGenre genre);
     List<Track> findByType(TrackType type);
 }
